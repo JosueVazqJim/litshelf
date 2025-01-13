@@ -3,7 +3,7 @@
 <h1>LITSHELF</h1>
 <p align="left">
 	<em><code>❯ LitShelf is a web application that allows users to explore, review, and discover books. The platform provides information about book titles, authors, subjects, and reviews while integrating seamlessly with external book data APIs.
-</code></em>
+</code>
 </p>
 <p align="left">
 	<img src="https://img.shields.io/github/license/JosueVazqJim/litshelf?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
@@ -198,7 +198,7 @@ Install litshelf using one of the following methods:
 3. Install the project dependencies:
 
 
-**Using `npm`** &nbsp; [<img align="center" src="" />]()
+**Using `npm`** &nbsp;()
 
 ```sh
 ❯ npm install
