@@ -1,6 +1,6 @@
 <div align="left" style="position: relative;">
 <h1>LITSHELF</h1>
-<img src="./public/images/logo2.png" align="center" width="30%" style="margin: -20px 0 0 20px;">
+<img src="./public/images/logo2.png" align="center" width="30%">
 <p align="center">
 	<em><code>❯ LitShelf is a web application that allows users to explore, review, and discover books. The platform provides information about book titles, authors, subjects, and reviews while integrating seamlessly with external book data APIs.
 </code>
