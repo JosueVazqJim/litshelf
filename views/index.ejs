@@ -1,0 +1,80 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- Titulo, subtitulo y formulario de búsqueda -->
+    <div class="col-12 text-center banner mb-5">
+        <h1 class="text-white">Your journey through books starts here</h1>
+        <h2 class="text-dark">Discover. Review. Share</h2>
+
+        <!-- Formulario de búsqueda -->
+        <form class="row form" action="/searchBooks" method="POST" id="searchForm">
+            <div class="col-md-8 offset-md-2 mt-3 d-flex gap-lg-4 gap-md-4 gap-sm-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="title" name="title"
+                        placeholder="Search for a book, an essay, an article, something." required />
+                </div>
+                <button type="submit" class="btn btn-dark form-submit" id="search">Search</button>
+            </div>
+        </form>
+    </div>
+    <!-- Termina el banner -->
+
+    <!-- Contenido de la pagina -->
+    <div class="container-fluid content mt-5">
+        <div class="row">
+            <% if (typeof error !=='undefined' && error) { %>
+                <div class="alert alert-danger ">
+                    <h4 class="alert-heading">
+                        <%= error.title %>
+                    </h4>
+                    <p>
+                        <%= error.description %>
+                    </p>
+                </div>
+                <% } %>
+
+                    <% if (locals.content.length !==0) { %>
+                        <p id="searhResult"></p>
+                        <%# %>
+                            <% content.forEach(element=> { %>
+                                <div class="col-md-4 mb-4">
+                                    <div class="card h-100 d-flex flex-column">
+                                        <img src="https://covers.openlibrary.org/b/id/<%= element.id_cover %>-M.jpg"
+                                            class="card-img-top mt-1" alt="Book cover" />
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title" id="titleBook">
+                                                <%= element.title || 'No Title Available' %>
+                                            </h5>
+                                            <h6 class="card-subtitle mb-2 text-muted" id="author">
+                                                <%= element.autor || 'Unknown Author' %>
+                                            </h6>
+                                            <p class="card-text mb-4">
+                                                <% let descriptionText='' ; if (typeof element.description==='string' )
+                                                    { descriptionText=element.description; } else if (typeof
+                                                    element.description==='object' && element.description !==null) {
+                                                    descriptionText=element.description.value
+                                                    || 'No description available' ; } else {
+                                                    descriptionText='No description available' ; }
+                                                    descriptionText=descriptionText.length> 120
+                                                    ? descriptionText.substring(0, descriptionText.lastIndexOf(' ',
+                                                    120)) + '...'
+                                                    : descriptionText;
+                                                    %>
+                                                    <%= descriptionText %>
+                                            </p>
+                                            <div class="mt-auto">
+                                                <button type="button" class="btn btn-dark btn-full watch-button">
+                                                    <a href="/viewBook?id=<%= element.id %>"
+                                                        class="botonesLibros">Watch</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }) %>
+                                    <% } %>
+        </div>
+    </div>
+    </div>
+    <!-- Termina el contenido de la pagina -->
+
+    <%- include('partials/footer.ejs') %>

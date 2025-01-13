@@ -1,0 +1,171 @@
+<%- include('partials/header.ejs') %>
+
+	<!-- Titulo, subtitulo y formulario de búsqueda -->
+	<div class="col-12 text-center banner mb-5">
+		<h1 class="text-white">Your journey through books starts here</h1>
+        <h2 class="text-dark">Discover. Review. Share</h2>
+
+		<!-- Formulario de búsqueda -->
+		<form class="row form" action="/" method="POST" id="searchForm">
+			<div class="col-md-8 offset-md-2 mt-3 d-flex gap-lg-4 gap-md-4 gap-sm-2">
+				<div class="input-group">
+					<input type="text" class="form-control" id="title" name="title"
+						placeholder="Search for a book, an essay, an article, something." required />
+				</div>
+				<button type="submit" class="btn btn-dark form-submit" id="search">Search</button>
+			</div>
+		</form>
+	</div>
+	<!-- Termina el banner -->
+
+	<!-- Contenido de la pagina -->
+	<div class="container-fluid content mt-5">
+		<div class="row">
+			<% if (error) { %>
+				<div class="alert alert-danger text-center">
+					<h4 class="alert-heading">
+						<%= error.title %>
+					</h4>
+					<p>
+						<%= error.description %>
+					</p>
+				</div>
+				<% } else { %>
+					<% if (content) { %>
+						<div class="col-md-12 mb-4">
+							<!-- Book details -->
+							<div class="h-100 d-flex flex-column align-items-center mt-3" >
+								<div class="h-100">
+									<div class="m-4 d-flex flex-column flex-md-row align-items-center">
+										<!-- Columna izquierda: Imagen, Título y Autor -->
+										<div class="col-md-4 col-sm-12 d-flex flex-column align-items-center justify-content-center text-center">
+											<img src="https://covers.openlibrary.org/b/id/<%= content.id_cover %>-L.jpg"
+												class="card-img-top bookImg mb-3" alt="Book cover" />
+											<h3 class="card-title">
+												<%= content.title %>
+											</h3>
+											<h4 class="card-subtitle mb-2 text-muted">
+												<%= content.autor %>
+											</h4>
+										</div>
+								
+										<!-- Columna derecha: Descripción y demás contenido -->
+										<div class="col-md-8 col-sm-12">
+											<p class="card-text mb-4">
+												<%= content.description %>
+											</p>
+								
+											<!-- Handling undefined subjects -->
+											<p class="card-subtitle text-muted">
+												<strong>Subjects:</strong>
+												<% if (content.subject) { %>
+													<%= content.subject %>
+												<% } else { %>
+													No subjects available
+												<% } %>
+											</p>
+								
+											<br>
+											<!-- Contenido adicional -->
+											<div class="d-flex flex-column align-items-center">
+												<p class="card-subtitle text-muted"><strong>Ratings Average:</strong>
+													<%= content.ratings_average %>
+												</p>
+								
+												<h3 class="mt-2 ">Current Edition</h3>
+												<p class="card-text"><strong>Title:</strong>
+													<%= content.title %>
+												</p>
+												<p class="card-text"><strong>Authors:</strong>
+													<%= content.autor %>
+												</p>
+												<p class="card-text"><strong>Publish Date:</strong>
+													<%= content.first_publish_year %>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+
+								
+								<div class="col-md-8 col-sm-12 mt-4">
+									<h3>Leave a Review</h3>
+									<form action="/postReview" method="POST">
+										<input type="hidden" name="bookId" value="<%= content.id %>">
+										<div class="mb-3">
+											<label for="reviewText" class="form-label">Review</label>
+											<textarea class="form-control" id="reviewText" name="reviewText" rows="3"
+												required></textarea>
+										</div>
+										<div class="mb-3">
+											<label for="userName" class="form-label">Your Name</label>
+											<input type="text" class="form-control" id="userName" name="userName"
+												required>
+										</div>
+										<div class="mb-3">
+											<label for="rating" class="form-label">Rating</label>
+											<div id="rating" class="star-rating">
+												<input type="radio" id="star5" name="rating" value="5" required>
+												<label for="star5" title="5 stars">&#9733;</label>
+												<input type="radio" id="star4" name="rating" value="4">
+												<label for="star4" title="4 stars">&#9733;</label>
+												<input type="radio" id="star3" name="rating" value="3">
+												<label for="star3" title="3 stars">&#9733;</label>
+												<input type="radio" id="star2" name="rating" value="2">
+												<label for="star2" title="2 stars">&#9733;</label>
+												<input type="radio" id="star1" name="rating" value="1">
+												<label for="star1" title="1 star">&#9733;</label>
+											</div>
+										</div>
+										<button type="submit" class="btn btn-primary">Submit Review</button>
+									</form>
+								</div>
+
+								<div class="col-md-8 col-sm-12 mt-4">
+									<h3>Reviews</h3>
+									<% if (content.reviews && content.reviews.length> 0) { %>
+										<% content.reviews.forEach(function(review) { %>
+											<div class="card mb-3">
+												<div class="card-body">
+													<h5 class="card-title">
+														<%= review.reviewer_name %>
+													</h5>
+													<p class="card-text">
+														<%= review.review_content %>
+													</p>
+													<div class="star-rating read-only">
+														<% for (var i=5; i>= 1; i--) { %>
+															<input type="radio"
+																id="star<%= i %>_<%= review.id %>_<%= review.index %>"
+																name="rating_<%= review.id %>" value="<%= i %>"
+																<%=review.rating==i ? 'checked' : '' %>
+															disabled
+															>
+															<label
+																for="star<%= i %>_<%= review.id %>_<%= review.index %>"
+																title="<%= i %> stars">
+																&#9733;
+															</label>
+															<% } %>
+													</div>
+
+													<p class="card-text">Rating: <%= review.rating %> stars</p>
+												</div>
+											</div>
+											<% }); %>
+												<% } else { %>
+													<p>No reviews available</p>
+													<% } %>
+								</div>
+							</div>
+
+						</div>
+						<% } %>
+							<% } %>
+		</div>
+	</div>
+	</div>
+	<!-- Termina el contenido de la pagina -->
+
+	<%- include('partials/footer.ejs') %>

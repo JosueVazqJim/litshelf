@@ -1,0 +1,157 @@
+#la data recopilada por la api se enviara al cliente de la siguiente manera
+
+# /
+envia un arreglo de objetos que tienen este tipo de informacion
+
+{
+    key: '/works/OL17930368W',
+    title: 'Atomic Habits',
+    author_key: [ 'OL7422948A' ],
+    author_name: [ 'James Clear' ],
+    cover_i: 12539702,
+    first_publish_year: 2016,
+    ratings_average: 'No ratings available',
+    edition_key: ['OL36647151M'],
+    current_edition: 'OL36647151M',
+    description: "No matter your goals, Atomic Habits offers a proven framework for improving every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+    subjects: [
+    'Habit',
+    'Habit breaking',
+    'Behavior modification',
+    ]
+},
+
+#/searchBooks
+{
+    key: '/works/OL872773W',
+    title: 'Der Steppenwolf',
+    author_key: [ 'OL76437A' ],
+    author_name: [ 'Hermann Hesse' ],
+    cover_i: 3221083,
+    first_publish_year: 1927,
+    ratings_average: 3.8636363,
+    edition_key: [
+    'OL51172425M', 'OL51172423M', 'OL51172422M', 'OL51172421M', 'OL51172420M',
+    'OL51172419M', 'OL51172417M', 'OL51172416M', ... 137 more items
+    ],
+    current_edition: 'OL12761348M',
+    description: 'A story that focuses on the loneliness and suffering of the protagonist, Harry Haller, who feels that he has no place in a world filled with meaningless frivolity. Having decided to take his own life a chance encounter causes him to change his views and he begins to learn ways to enjoy life. One of the most misunderstood of his novels the book is, according to Hesse, about the possibilities of transcendence and healing.',
+    subjects: [
+    'Fiction',
+    'Life',
+    
+    ]
+},
+
+#/searchAuthors
+{
+    name: 'Herman Hesse',
+    birth_date: 'Birth date not available',
+    top_work: 'Siddhartha',
+    bio: 'Bio not available',
+    subjects: [
+    'Spirituality',
+    'Fiction, general',
+    'Continental european fiction (fictional works by one author)',
+    'Translations into English',
+    'Short stories',
+    'Old age',
+    'Literary collections',
+    'Hesse, hermann, 1877-1962',
+    'Germanic literature',
+    'German fiction'
+    ],
+    key: 'OL7712297A'
+},
+
+#/searchGenres
+{
+    key: '/works/OL58402W',
+    title: 'Guess How Much I Love You',
+    author_key: [ '/authors/OL34796A', '/authors/OL222412A' ],
+    author_name: [ 'Sam McBratney', 'Anita Jeram' ],
+    cover_i: 13282906,
+    first_publish_year: 1839,
+    ratings_average: 'No ratings available',
+    edition_key: [ 'OL26334481M' ],
+    current_edition: 'OL26334481M',
+    description: 'Welcome the family classic with an elegant, refreshed cover — the quintessential picture book, just waiting to be shared.\r\n' +
+    '\r\n' +
+    'Sometimes, when you love someone very, very much, you want to find a way of describing how much you treasure them. But, as Little Nutbrown Hare and Big Nutbrown Hare discover, love is not an easy thing to measure! For two decades, Sam McBratney’s timelessly endearing story, beautifully rendered in Anita Jeram’s exquisite watercolors, has captured the deep and tender bond between parent and child. Guess How Much I Love You is one of the world’s best-loved picture books.',
+    subjects: [
+    'Fiction',
+    'Juvenile fiction',
+    'Love',
+    'Picture books for children'
+    ]
+},
+
+#/trending
+{
+    key: '/works/OL17930368W',
+    title: 'Atomic Habits',
+    author_key: [ 'OL7422948A' ],
+    author_name: [ 'James Clear' ],
+    cover_i: 12539702,
+    first_publish_year: 2016,
+    ratings_average: 'No ratings available',
+    edition_key: ['OL36647151M'],
+    current_edition: 'OL36647151M',
+    description: "No matter your goals, Atomic Habits offers a proven framework for improving every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.",
+    subjects: [
+    'Habit',
+    'Habit breaking',
+    'Behavior modification',
+    ]
+},
+
+#/new
+{
+    key: '/works/OL1925724W',
+    title: 'The analyst',
+    author_key: [ 'OL230857A' ],
+    author_name: [ 'John Katzenbach' ],
+    cover_i: 209381,
+    first_publish_year: 2002,
+    ratings_average: 'No ratings available',
+    edition_key: [ 'OL3950817M' ],
+    current_edition: 'OL3950817M',
+    description: {
+    type: '/type/text',
+    value: "Happy 53rd birthday, Doctor. Welcome to the first day of your death.When a mysterious letter bearing these threatening words is delivered to Dr. Frederick Starks, his predictable life is thrown into chaos. Suddenly, the psychoanalyst is plunged into a horrific game designed by a man who calls himself Rumplestiltskin. The rules: in two weeks Starks must guess Rumplestiltskin's identity and the source of his fury. If he succeeds, he goes free. If he fails, one by one, Rumplestiltskin will destroy fifty-two of Dr. Starks' loved ones--friends, relatives, children--unless the good doctor agrees to kill himself.You ruined my life. And now I fully intend to ruin yours.Ignoring the threat is not an option. When one of his patients dies under the wheels of a subway train and a detective investigating the case is struck by a hit-and-run driver, Starks knows his tormentor means business. And then there are the messengers sent to guide Starks on his descent, from the seductive woman in a trench coat who calls herself Virgil to a lawyer named Merlin weaving a spell of havoc and lies. His bank account rifled, his credit ruined, and his reputation dragged through the mud, Starks must rouse himself from the cocoon of his life, unlock the secret of Rumplestiltskin, and find a way to stop the madman--before he himself is driven mad.One thing of which you can be absolutely certain: My anger knows no limits. A mesmerizing thriller that gives a wicked new twist to the doctor-patient relationship, The Analyst's Last Days weaves a blistering race against time with a tale of identities shattered and chosen, disguises taken and discarded. With his trademark style, breathless plots, and brilliantly realized characters, John Katzenbach proves once again why both critics and fans alike have crowned him the master of suspense.From the Hardcover edition."
+    },
+    subjects: [
+    'Psychotherapist and patient',
+    'Threat (Psychology)',
+    'Suspense',
+    'Fiction',
+    'Psychoanalysts',
+    'Fiction, suspense',
+    'Fiction, psychological',
+    'Psychotherapists, fiction',
+    'Large type books',
+    'Fiction, thrillers, suspense'
+    ]
+},
+
+#/classics
+{
+    key: '/works/OL1089297W',
+    title: 'The Prince',
+    author_key: [ '/authors/OL23135A' ],
+    author_name: [ 'Niccolò Machiavelli' ],
+    cover_i: 12726168,
+    first_publish_year: 1515,
+    ratings_average: 'No ratings available',
+    edition_key: [ 'OL37826838M' ],
+    current_edition: 'OL37826838M',
+    description: 'The Prince (Italian: Il Principe [il ˈprintʃipe]; Latin: De Principatibus) is a 16th-century political treatise written by Italian diplomat and political theorist Niccolò Machiavelli as an instruction guide for new princes and royals. The general theme of The Prince is of accepting that the aims of princes – such as glory and survival – can justify the use of immoral means to achieve those ends.\r\n' +
+    '\r\n' +
+    `From Machiavelli's correspondence, a version appears to have been distributed in 1513, using a Latin title, De Principatibus (Of Principalities). However, the printed version was not published until 1532, five years after Machiavelli's death. This was carried out with the permission of the Medici pope Clement VII, but "long before then, in fact since the first appearance of The Prince in manuscript, controversy had swirled about his writings".\r\n` +
+    '\r\n' +
+    "Although The Prince was written as if it were a traditional work in the mirrors for princes style, it was generally agreed as being especially innovative. This is partly because it was written in the vernacular Italian rather than Latin, a practice that had become increasingly popular since the publication of Dante's Divine Comedy and other works of Renaissance literature.",
+    subjects: [
+    'Political science, early works to 1800',
+    ... 6 more items
+    ]
+},
