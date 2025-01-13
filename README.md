@@ -16,6 +16,15 @@ LitShelf is a web application that allows users to explore, review, and discover
 - **Database**: PostgreSQL
 - **External API**: Open Library API for book data
 
+## ScreenShots
+
+![LitShelf Screenshot](./imagesRepo/screen1.png)
+
+![LitShelf Screenshot](./imagesRepo/screen2.png)
+
+![LitShelf Screenshot](./imagesRepo/screen3.png)
+
+
 ## Installation
 
 1. Clone the repository:
