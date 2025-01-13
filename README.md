@@ -1,23 +1,25 @@
 <div align="left" style="position: relative;">
-<img src="./public/images/logo2.png" align="right" width="30%" style="margin: -20px 0 0 20px;">
 <h1>LITSHELF</h1>
-<p align="left">
+<img src="./public/images/logo2.png" align="center" width="30%" style="margin: -20px 0 0 20px;">
+<p align="center">
 	<em><code>❯ LitShelf is a web application that allows users to explore, review, and discover books. The platform provides information about book titles, authors, subjects, and reviews while integrating seamlessly with external book data APIs.
 </code>
 </p>
-<p align="left">
+<p align="center">
 	<img src="https://img.shields.io/github/license/JosueVazqJim/litshelf?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
 	<img src="https://img.shields.io/github/last-commit/JosueVazqJim/litshelf?style=for-the-badge&logo=git&logoColor=white&color=0080ff" alt="last-commit">
 	<img src="https://img.shields.io/github/languages/top/JosueVazqJim/litshelf?style=for-the-badge&color=0080ff" alt="repo-top-language">
 	<img src="https://img.shields.io/github/languages/count/JosueVazqJim/litshelf?style=for-the-badge&color=0080ff" alt="repo-language-count">
 </p>
-<p align="left">Built with the tools and technologies:</p>
-<p align="left">
+<p align="center">Built with the tools and technologies:</p>
+<p align="center">
 	<img src="https://img.shields.io/badge/Express-000000.svg?style=for-the-badge&logo=Express&logoColor=white" alt="Express">
 	<img src="https://img.shields.io/badge/npm-CB3837.svg?style=for-the-badge&logo=npm&logoColor=white" alt="npm">
+	<img src="https://img.shields.io/badge/NodeJS-339933.svg?style=for-the-badge&logo=nodejs&logoColor=white" alt="nodejs">
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">
 	<img src="https://img.shields.io/badge/EJS-B4CA65.svg?style=for-the-badge&logo=EJS&logoColor=black" alt="EJS">
 	<img src="https://img.shields.io/badge/Axios-5A29E4.svg?style=for-the-badge&logo=Axios&logoColor=white" alt="Axios">
+	<img src="https://img.shields.io/badge/postgresql-5A29E4.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white" alt="PostgreSQL">
 </p>
 </div>
 <br clear="right">
